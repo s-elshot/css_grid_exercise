@@ -1,1 +1,76 @@
 /*Maak hier jouw CSS!*/
+/* requirements activated at screens < 576px =_Mobile_ */
+/* grid container element - screens < 576px  */
+.total-layout {
+    background-color: #ffefdb;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+        "gaa"
+        "gab"
+        "gac"
+        "gad"
+        "gae"
+        "."
+        "gaf";
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+}
+
+/* div-class item - flex-box items */
+.item {
+    background-color: #ba3b46;
+    border: 2px #993139;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+/* id-items from divs - containing grid area's */
+#part-a {
+    grid-area: gaa;
+}
+
+#part-b {
+    grid-area: gab;
+}
+
+#part-c {
+    grid-area: gac;
+}
+
+#part-d {
+    grid-area: gad;
+}
+
+#part-e {
+    grid-area: gae;
+}
+
+#part-f {
+    grid-area: gaf;
+}
+
+/* requirements activated at screens > 576px_Desktops_ */
+/* grid container element - screens > 576px  */
+@media screen and (min-width: 576px) {
+    .total-layout {
+        background-color: #ffefdb;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+            "gaa gac gac"
+            "gab gac gac"
+            "gab gae gad"
+            "gab gae ."
+            "gaf gaf gaf";
+        row-gap: 16px;
+        column-gap: 16px;
+        padding: 16px;
+    }
+}
